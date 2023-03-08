@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## commands
 
 1. npm install primeicons --save
+
+
+## progress
+1. db created - springboot -> GET, POST done with JPA
