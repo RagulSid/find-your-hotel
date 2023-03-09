@@ -1,48 +1,20 @@
 <body>
     <header>
         <h1>Restaurants</h1>
-        <input type="text" placeholder="Search for a restaurant" onkeyup="search()">
+        <input type="text" placeholder="Search for a restaurant">
         <button onclick="sortList()"><i class="pi pi-sort-amount-down">⠀</i>Sort by rating</button>
     </header>
     <main>
         <ul id="restaurant-list">
-            <li class="restaurant-item">
+            <div>
+            <li class="restaurant-item"  *ngFor="let h of hotel">
                 <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
-                <h2>Restaurant 1</h2>
-                <p class="rating">Rating: 4.5 stars</p>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2>{{h.hotelName}}</h2>
+                <p>{{h.location}}</p>
+                <p class="rating">{{h.rating}}</p>
+                <p class="description">{{h.description}}</p>
             </li>
-            <li class="restaurant-item">
-                <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
-                <h2>Restaurant 1</h2>
-                <p class="rating">Rating: 4.5 stars</p>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </li>
-            <li class="restaurant-item">
-                <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
-                <h2>Restaurant 1</h2>
-                <p class="rating">Rating: 4.5 stars</p>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </li>
-            <li class="restaurant-item">
-                <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
-                <h2>Restaurant 1</h2>
-                <p class="rating">Rating: 4.5 stars</p>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </li>
-            <li class="restaurant-item">
-                <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
-                <h2>Restaurant 1</h2>
-                <p class="rating">Rating: 4.5 stars</p>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </li>
-            <li class="restaurant-item">
-                <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
-                <h2>Restaurant 1</h2>
-                <p class="rating">Rating: 4.5 stars</p>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </li>
-            
+        </div>
         </ul>
     </main>
     <script type="text/javascript" src="script.js"></script>

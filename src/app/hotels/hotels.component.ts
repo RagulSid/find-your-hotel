@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Hotel } from '../hotel';
+import { HotelFetchService } from '../hotel-fetch.service';
 
 @Component({
   selector: 'app-hotels',
@@ -6,5 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./hotels.component.css']
 })
 export class HotelsComponent {
+  hotel?: Hotel[];
+  hotels: Hotel[] = [];
+  hs: Hotel[] =[];
+
+  constructor(private hotelService: HotelFetchService){}
+
+  ngOnInit(): void{
+    this.getAllHotels();    
+  }
+
+  getAllHotels(){
+    this.hotelService.getllHotel().subscribe(data=>{
+      this.hotel = data;
+    })
+  }
+
+  
 
 }
