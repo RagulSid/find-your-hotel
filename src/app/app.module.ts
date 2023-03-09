@@ -11,8 +11,8 @@ import { HotelsComponent } from './hotels/hotels.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
 
-// import { SearchPipe } from ''
 
 @NgModule({
   declarations: [
@@ -21,14 +21,14 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     SignupComponent,
     HomeComponent,
-    HotelsComponent
+    HotelsComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SearchPipe
   ],
   providers: [],
   bootstrap: [AppComponent]

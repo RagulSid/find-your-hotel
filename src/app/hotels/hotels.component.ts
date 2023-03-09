@@ -9,8 +9,7 @@ import { HotelFetchService } from '../hotel-fetch.service';
 })
 export class HotelsComponent {
   hotel?: Hotel[];
-  hotels: Hotel[] = [];
-  hs: Hotel[] =[];
+  search: any;
 
   constructor(private hotelService: HotelFetchService){}
 
@@ -24,6 +23,5 @@ export class HotelsComponent {
     })
   }
 
-  
 
 }
