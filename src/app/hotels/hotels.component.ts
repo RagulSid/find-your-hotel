@@ -8,8 +8,12 @@ import { HotelFetchService } from '../hotel-fetch.service';
   styleUrls: ['./hotels.component.css']
 })
 export class HotelsComponent {
-  hotel?: Hotel[];
+  hotel: any = [];
+  carddetails: any = [];
   search: any;
+
+  displayMaximizable: boolean = false;
+
 
   constructor(private hotelService: HotelFetchService){}
 
@@ -21,6 +25,18 @@ export class HotelsComponent {
     this.hotelService.getllHotel().subscribe(data=>{
       this.hotel = data;
     })
+  }
+
+  cardClick(i: any){
+    const c = parseInt(i);
+    for(var j=0;i<this.hotel.length;j++){
+      if(this.hotel[j].id == c){
+        this.carddetails = Array(this.hotel[j]);
+      }
+      this.displayMaximizable = true;
+    }
+
+
   }
 
 

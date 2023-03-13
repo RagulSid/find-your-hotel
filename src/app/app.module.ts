@@ -13,6 +13,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +34,9 @@ import { SearchPipe } from './search.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    DialogModule,
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

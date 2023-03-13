@@ -6,7 +6,7 @@
     </header>
     <main>
         <ul id="restaurant-list">
-            <li class="restaurant-item"  *ngFor="let h of hotel | search:search">
+            <li class="restaurant-item"  *ngFor="let h of hotel | search:search ; let i=index" (click)="cardClick(i)">
                 <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
                 <h2>{{h.hotelName}}</h2>
                 <p>{{h.location}}</p>
@@ -17,3 +17,29 @@
     </main>
     <script type="text/javascript" src="script.js"></script>
 </body>
+
+
+
+
+
+<!-- popups -->
+<p-dialog header="Hotel Details" [(visible)]="displayMaximizable" [modal]="true" [style]="{width: '50vw'}"
+    [maximizable]="true" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+    <li class="restaurant-item" *ngFor="let h of carddetails | search:search ;">
+        <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
+        <h2>{{h.hotelName}}</h2>
+        <p>{{h.location}}</p>
+        <p class="rating">{{h.rating}}</p>
+        <p class="description">{{h.description}}</p>
+    </li>
+    <h3>Reviews</h3>
+    <hr>
+    <ul *ngFor="let h of carddetails">
+        ● {{h.review}}
+    </ul>
+    <p-button icon="pi pi-pencil" (click)="displayMaximizable=false" label="write review"
+        class="p-button-text"></p-button>
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="displayMaximizable=false" label="Ok" class="p-button-text"></p-button>
+    </ng-template>
+</p-dialog>
