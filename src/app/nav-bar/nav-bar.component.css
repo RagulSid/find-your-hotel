@@ -19,6 +19,7 @@ body {
 }
 img {
     width: 100%;
+    cursor: pointer;
 }
 header {
     width: 80%;

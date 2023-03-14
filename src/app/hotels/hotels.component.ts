@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Hotel } from '../hotel';
 import { HotelFetchService } from '../hotel-fetch.service';
+import { LocationService } from '../services/location.service';
 
 @Component({
   selector: 'app-hotels',
@@ -13,15 +14,21 @@ export class HotelsComponent {
   search: any;
   review: any
   reviewId: any;
+  location:any;
+
   
 
   displayMaximizable: boolean = false;
 
 
-  constructor(private hotelService: HotelFetchService){}
+  constructor(private hotelService: HotelFetchService, public _location: LocationService){}
 
-  ngOnInit(): void{
-    this.getAllHotels();    
+  ngOnInit(){
+    this.getAllHotels();
+    this._location.getLocation().subscribe((response: any)=>{
+      console.log(response);
+      this.location = response;
+    })
   }
 
   getAllHotels(){
@@ -46,12 +53,16 @@ export class HotelsComponent {
     
   }
 
-  postReview(review: any){
+  postReview(i: any, review: any){
+    console.log(i);
     console.log(review);
-    
-    // this.hotelService.postReview(this.hotel).subscribe()
-    
+    this.hotelService.postReview(this.hotel).subscribe()
   }
 
+  sortData(){
+    this.hotel.sort((a:any, b:any) => a - b);
+    this.getAllHotels()
+
+  }
 
 }

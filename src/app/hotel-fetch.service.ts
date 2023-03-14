@@ -16,6 +16,6 @@ export class HotelFetchService {
   }
 
   postReview(hotel?: Hotel): Observable<Object>{
-   return this.httpClient.post<Object>(`${this.URL}`, hotel);
+   return this.httpClient.put<Object>(`${this.URL}/1`, hotel);
   }
 }
