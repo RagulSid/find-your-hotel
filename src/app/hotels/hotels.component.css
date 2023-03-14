@@ -86,3 +86,35 @@ main {
     background: red;
     background-color: red;
   }
+
+  .right span {
+    left: initial;
+    right: .9em;
+  }
+  input {
+    font: inherit;
+    padding: .6em .9em;
+    border-radius: .6em;
+    border: 1px solid darkgray;
+    padding-inline: 2em .9em;
+    width: 10em;
+  }
+  input:invalid {
+    border-color: orangered;
+    color: crimson;
+  }
+  #left{
+    float:left;
+    width: 50px;
+    padding: 0%;
+    margin: 0%;
+  }
+  #right{
+    float:right;
+    width: 450px;
+    padding: 0%;
+    margin: 0%;
+  }
+#idhidden{
+    display: none;
+}

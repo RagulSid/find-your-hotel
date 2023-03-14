@@ -24,21 +24,28 @@
 
 <!-- popups -->
 <p-dialog header="Hotel Details" [(visible)]="displayMaximizable" [modal]="true" [style]="{width: '50vw'}"
-    [maximizable]="true" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
-    <li class="restaurant-item" *ngFor="let h of carddetails | search:search ;">
+    [maximizable]="true" [baseZIndex]="10000" [draggable]="false" [resizable]="false" id="left">
+
+    <li class="restaurant-item" *ngFor="let h of carddetails; let i=index">
         <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
         <h2>{{h.hotelName}}</h2>
         <p>{{h.location}}</p>
         <p class="rating">{{h.rating}}</p>
         <p class="description">{{h.description}}</p>
     </li>
+
+    <div id="right">
     <h3>Reviews</h3>
     <hr>
     <ul *ngFor="let h of carddetails">
         ● {{h.review}}
     </ul>
-    <p-button icon="pi pi-pencil" (click)="displayMaximizable=false" label="write review"
-        class="p-button-text"></p-button>
+    </div>
+
+
+    <form><input name="review"  type="text" [(ngModel)]="review"></form>    
+    <p-button icon="pi pi-pencil" (click)="postReview(review)" label="write review" class="p-button-text"></p-button>
+
     <ng-template pTemplate="footer">
         <p-button icon="pi pi-check" (click)="displayMaximizable=false" label="Ok" class="p-button-text"></p-button>
     </ng-template>

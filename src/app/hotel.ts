@@ -3,5 +3,7 @@ export interface Hotel{
     hotelName:string,
     description:string,
     location:string,
-    rating:number
+    rating:number,
+    review:string,
+    hotelNum:number
 }

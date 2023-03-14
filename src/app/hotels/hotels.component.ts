@@ -11,6 +11,9 @@ export class HotelsComponent {
   hotel: any = [];
   carddetails: any = [];
   search: any;
+  review: any
+  reviewId: any;
+  
 
   displayMaximizable: boolean = false;
 
@@ -25,18 +28,29 @@ export class HotelsComponent {
     this.hotelService.getllHotel().subscribe(data=>{
       this.hotel = data;
     })
+    
   }
 
   cardClick(i: any){
+    console.log(this.hotel[i].id);
+    
     const c = parseInt(i);
     for(var j=0;i<this.hotel.length;j++){
-      if(this.hotel[j].id == c){
+      if(this.hotel[j].id === c){
         this.carddetails = Array(this.hotel[j]);
       }
       this.displayMaximizable = true;
     }
+    this.reviewId = c;
+    console.log(this.reviewId);
+    
+  }
 
-
+  postReview(review: any){
+    console.log(review);
+    
+    // this.hotelService.postReview(this.hotel).subscribe()
+    
   }
 
 
