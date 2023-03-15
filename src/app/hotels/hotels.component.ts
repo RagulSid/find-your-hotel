@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Hotel } from '../hotel';
 import { HotelFetchService } from '../hotel-fetch.service';
@@ -15,13 +16,14 @@ export class HotelsComponent {
   review: any
   reviewId: any;
   location:any;
+  idhotel: any = [];
 
   
 
   displayMaximizable: boolean = false;
 
 
-  constructor(private hotelService: HotelFetchService, public _location: LocationService){}
+  constructor(private hotelService: HotelFetchService, public _location: LocationService,private http:HttpClient){}
 
   ngOnInit(){
     this.getAllHotels();
@@ -53,16 +55,21 @@ export class HotelsComponent {
     
   }
 
+  url= "http://localhost:8080/places/hotels/"
   postReview(i: any, review: any){
     console.log(i);
     console.log(review);
-    this.hotelService.postReview(this.hotel).subscribe()
+
+    this.idhotel = this.hotel[i];
+    console.log(this.idhotel);
+    
+    this.idhotel.review = review;
+      this.http.put(this.url+ i, this.idhotel).pipe().subscribe((res =>{}))
   }
 
   sortData(){
     this.hotel.sort((a:any, b:any) => a - b);
     this.getAllHotels()
-
   }
 
 }
