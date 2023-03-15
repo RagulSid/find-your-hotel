@@ -17,6 +17,7 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     HotelsComponent,
     SearchPipe,
+    ReviewsComponent,
   ],
   imports: [
     BrowserModule,

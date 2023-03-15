@@ -33,7 +33,11 @@ header input[type="text"] {
     margin-right: 10px;
     color: #333;
 }
-
+#city{
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
 header button {
     padding: 10px 20px;
     border-radius: 4px;
