@@ -1,13 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { flush } from '@angular/core/testing';
+import { MessageService } from 'primeng/api';
 import { Hotel } from '../hotel';
 import { HotelFetchService } from '../hotel-fetch.service';
 import { LocationService } from '../services/location.service';
 
+
 @Component({
   selector: 'app-hotels',
   templateUrl: './hotels.component.html',
-  styleUrls: ['./hotels.component.css']
+  styleUrls: ['./hotels.component.css'],
+  providers: [MessageService]
+
 })
 export class HotelsComponent {
   hotel: any = [];
@@ -23,7 +28,7 @@ export class HotelsComponent {
   displayMaximizable: boolean = false;
 
 
-  constructor(private hotelService: HotelFetchService, public _location: LocationService,private http:HttpClient){}
+  constructor(private messageService: MessageService,private hotelService: HotelFetchService, public _location: LocationService,private http:HttpClient){}
 
   ngOnInit(){
     this.getAllHotels();
@@ -31,6 +36,10 @@ export class HotelsComponent {
       console.log(response);
       this.location = response;
     })
+  }
+
+  showSuccess() {
+    this.messageService.add({severity:'success', summary: 'Success', detail: 'Review Posted sucessfully'});
   }
 
   getAllHotels(){
@@ -62,9 +71,14 @@ export class HotelsComponent {
 
     this.idhotel = this.hotel[i];
     console.log(this.idhotel);
-    
+     
     this.idhotel.review = review;
-      this.http.put(this.url+ i, this.idhotel).pipe().subscribe((res =>{}))
+    this.http.put(this.url+ i, this.idhotel).pipe().subscribe((res =>{}))
+
+    this.showSuccess();
+    setTimeout(()=>{                           // <<<---using ()=> syntax
+      this.displayMaximizable = false;
+  }, 1000);
   }
 
   sortData(){

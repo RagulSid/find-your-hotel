@@ -11,7 +11,7 @@ export class SearchPipe implements PipeTransform {
     }
     
     return item.filter((hotels: { hotelName: any; location: any; description: any;})=>
-       hotels.hotelName.indexOf(args) > -1 
+       hotels.hotelName.indexOf(args) > -1
     || hotels.location.indexOf(args) > -1 
     || hotels.description.indexOf(args) > -1);
   }

@@ -44,7 +44,7 @@
     <h3>Reviews</h3>
     <hr>
     <ul *ngFor="let h of carddetails">
-        ● {{h.review}}
+        1. {{h.review}}
     </ul>
     </div>
 
@@ -56,3 +56,4 @@
         <p-button icon="pi pi-check" (click)="displayMaximizable=false" label="Ok" class="p-button-text"></p-button>
     </ng-template>
 </p-dialog>
+<p-toast></p-toast>

@@ -18,6 +18,10 @@ import { ButtonModule } from 'primeng/button';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReviewsComponent } from './reviews/reviews.component';
+import {ToastModule} from 'primeng/toast';
+import {RippleModule} from 'primeng/ripple';
+
+
 
 
 @NgModule({
@@ -40,6 +44,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     ButtonModule,
     BrowserAnimationsModule,
     FormsModule,
+    ToastModule,
+    RippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
