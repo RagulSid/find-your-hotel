@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { flush } from '@angular/core/testing';
 import { MessageService } from 'primeng/api';
 import { Hotel } from '../hotel';
-import { HotelFetchService } from '../hotel-fetch.service';
+import { HotelFetchService } from '../services/hotel-fetch.service';
 import { LocationService } from '../services/location.service';
 
 
