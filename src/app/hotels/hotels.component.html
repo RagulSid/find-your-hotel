@@ -3,13 +3,13 @@
         
         <h1>Restaurants</h1>
         <input type="text" placeholder="Find restaurants" name="search" [(ngModel)]="search">
-        <button ><i class="pi pi-sort-amount-down"(click)="sortData()">⠀</i>Sort by rating</button>
+        <button (click)="sort('review')"><i class="pi pi-sort-amount-down">⠀</i>Sort by rating</button>
     </header>
     <main>
         <h2>Popular Hotels from <a id="city">{{location?.city}}</a></h2>
 
         <ul id="restaurant-list">
-            <li class="restaurant-item"  *ngFor="let h of hotel | search:search ; let i=index" (click)="cardClick(i)">
+            <li class="restaurant-item"  *ngFor="let h of hotel | search:search | orderBy : key: reverse ; let i=index" (click)="cardClick(i)">
                 <img src="../../assets/res-images/res1.jpg" alt="Restaurant 1">
                 <h2>{{h.hotelName}}</h2>
                 <p>{{h.location}}</p>
@@ -49,8 +49,8 @@
     </div>
 
 
-    <form><input name="review"  type="text" [(ngModel)]="review"></form>    
-    <p-button icon="pi pi-pencil" (click)="postReview(h.id, review)" label="write review" class="p-button-text"></p-button>
+    <!-- <form><input name="review"  type="text" [(ngModel)]="review"></form>    
+    <p-button icon="pi pi-pencil" (click)="postReview(h.id, review)" label="write review" class="p-button-text"></p-button> -->
 
     <ng-template pTemplate="footer">
         <p-button icon="pi pi-check" (click)="displayMaximizable=false" label="Ok" class="p-button-text"></p-button>

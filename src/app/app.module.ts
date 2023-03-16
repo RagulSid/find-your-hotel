@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReviewsComponent } from './reviews/reviews.component';
 import {ToastModule} from 'primeng/toast';
 import {RippleModule} from 'primeng/ripple';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 
 
@@ -45,7 +46,8 @@ import {RippleModule} from 'primeng/ripple';
     BrowserAnimationsModule,
     FormsModule,
     ToastModule,
-    RippleModule
+    RippleModule,
+    Ng2OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

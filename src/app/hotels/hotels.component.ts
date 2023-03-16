@@ -49,6 +49,13 @@ export class HotelsComponent {
     
   }
 
+  key: string ='rating';
+  reverse:boolean = false;
+  sort(key:string){
+    key = key;
+    this.reverse =!this.reverse;
+  }
+
   cardClick(i: any){
     console.log(this.hotel[i].id);
     
