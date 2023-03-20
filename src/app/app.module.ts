@@ -21,6 +21,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import {ToastModule} from 'primeng/toast';
 import {RippleModule} from 'primeng/ripple';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -47,7 +48,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     FormsModule,
     ToastModule,
     RippleModule,
-    Ng2OrderModule
+    Ng2OrderModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
