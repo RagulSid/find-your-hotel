@@ -22,8 +22,11 @@ import {ToastModule} from 'primeng/toast';
 import {RippleModule} from 'primeng/ripple';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4e221acb177468677efffbfb08fcd936c878259a
 
 
 
@@ -51,8 +54,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ToastModule,
     RippleModule,
     Ng2OrderModule,
+<<<<<<< HEAD
     NgbModule,
     ReactiveFormsModule,
+=======
+    NgbModule
+>>>>>>> 4e221acb177468677efffbfb08fcd936c878259a
   ],
   providers: [],
   bootstrap: [AppComponent]

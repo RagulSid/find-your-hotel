@@ -1,6 +1,4 @@
 @import '~primeicons/primeicons.css';
-
-
 @font-face {
     src: url("../../assets/poppins.ttf");
     font-family: "Poppins";
@@ -126,4 +124,3 @@ ngb-rating{
     color: orange;
     font-size: 30px;
 }
-
