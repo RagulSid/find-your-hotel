@@ -22,6 +22,8 @@ export class HotelsComponent {
   reviewId: any;
   location:any;
   idhotel: any = [];
+  hotelrating= 0;
+
 
   
 
@@ -46,7 +48,13 @@ export class HotelsComponent {
     this.hotelService.getllHotel().subscribe(data=>{
       this.hotel = data;
     })
-    
+  }
+
+  key: string ='rating';
+  reverse:boolean = false;
+  sort(key:string){
+    key = key;
+    this.reverse =!this.reverse;
   }
 
   cardClick(i: any){

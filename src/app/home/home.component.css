@@ -134,9 +134,9 @@ input#search-bar {
     outline: none;
 }
 input#search-bar:focus {
-    border: 1px solid #008abf;
+    border: 1px solid black;
     transition: 0.35s ease;
-    color: #008abf;
+    color: black;
 }
 input#search-bar:focus::-webkit-input-placeholder {
     transition: opacity 0.45s ease;
