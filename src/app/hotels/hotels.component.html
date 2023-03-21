@@ -6,8 +6,7 @@
         <button (click)="sort('review')"><i class="pi pi-sort-amount-down">⠀</i>Sort by rating</button>
     </header>
     <main>
-        <h2>Popular Hotels from <a id="city" routerLink="../home">{{location?.city}}</a></h2>
-
+        <h2>Popular Hotels from <a id="city">{{location?.city}}</a></h2>
 
         <ul id="restaurant-list">
             <li class="restaurant-item"  *ngFor="let h of hotel | search:search | orderBy : key: reverse ; let i=index" (click)="cardClick(i)">
@@ -23,6 +22,9 @@
     </main>
     <script type="text/javascript" src="script.js"></script>
 </body>
+
+
+
 
 
 <!-- popups -->
