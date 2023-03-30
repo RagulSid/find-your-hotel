@@ -1,29 +1,41 @@
-# FindYourHotel
+# Tech Stack :
+Angular | SpringBoot | FireBase Auth | Postman | MySQL
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+## MySQL
+- use hoteldb (located in assets)
+- create two tables for api
 
-## Development server
+## Postman
+- For SpringBoot API testing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![image](https://user-images.githubusercontent.com/56901958/228746297-39967fdd-fdbe-49f5-8e7f-7e5baafe5679.png)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## contact info
+- Linkedln : https://www.linkedin.com/in/ragulsid/
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Find your Hotel :
+- create new hotels ✅
+- get all hotels ✅
+- get user location, showing hotels by user location ✅
+- login ✅
+- signup ✅
+- page restriction (logined users only can see and post review) ✅
+- review posting in database
+- api using springboot controller ✅
+- update hotels by ID ✅
+- delete hotels by ID ✅
+- added angular toast for better UI ✅
+- used primeng icons and toggles, dialogs for better UI ✅
+- used firebase auth for user logins ✅
+- postman api testing for both springboot and firebase auth ✅
+- handled almost all errors from user and server side ✅
+- redirect to 404 if error happens ✅
 
 ## Running unit tests
-
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
 ## commands
-
 1. ng new <project-name>
 2. npm install primeicons --save
   
@@ -48,8 +60,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ![image](https://user-images.githubusercontent.com/56901958/228737418-c46b3900-66a5-4a60-b974-5d3e290cc320.png)
   
 ## Demo Video
-  
 - [Demo video](https://youtu.be/nLVQVl1SfVk)
-
-
-
