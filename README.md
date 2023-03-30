@@ -24,8 +24,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## commands
 
-1. npm install primeicons --save
-
+1. ng new <project-name>
+2. npm install primeicons --save
 
 ## progress
 1. db created - springboot -> GET, POST done with JPA
+
+## Screenshots
+![image](https://user-images.githubusercontent.com/56901958/228737094-f17a80a8-7663-471e-bdc7-3062f62d954b.png)
+![image](https://user-images.githubusercontent.com/56901958/228737284-96b43f02-da78-402d-8244-cadf54e1966a.png)
+![image](https://user-images.githubusercontent.com/56901958/228737355-89232fb9-4fbf-444a-9088-33416eb6d103.png)
+![image](https://user-images.githubusercontent.com/56901958/228737418-c46b3900-66a5-4a60-b974-5d3e290cc320.png)
+
+
+
