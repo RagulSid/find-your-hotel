@@ -8,6 +8,7 @@ Angular | SpringBoot | FireBase Auth | Postman | MySQL
 ## Postman
 - For SpringBoot API testing
 - post review added extra
+- Google Auths requests
 
 ![image](https://user-images.githubusercontent.com/56901958/228746297-39967fdd-fdbe-49f5-8e7f-7e5baafe5679.png)
 
