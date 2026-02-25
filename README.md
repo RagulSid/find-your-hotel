@@ -1,6 +1,9 @@
 # Tech Stack :
 Angular | SpringBoot | FireBase Auth | Postman | MySQL
 
+## Demo Video
+- [Demo video](https://youtu.be/nLVQVl1SfVk)
+
 ## MySQL
 - use hoteldb (located in assets)
 - create two tables for api
@@ -60,6 +63,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ![image](https://user-images.githubusercontent.com/56901958/228737284-96b43f02-da78-402d-8244-cadf54e1966a.png)
 ![image](https://user-images.githubusercontent.com/56901958/228737355-89232fb9-4fbf-444a-9088-33416eb6d103.png)
 ![image](https://user-images.githubusercontent.com/56901958/228737418-c46b3900-66a5-4a60-b974-5d3e290cc320.png)
-  
-## Demo Video
-- [Demo video](https://youtu.be/nLVQVl1SfVk)
